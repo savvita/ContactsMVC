@@ -15,6 +15,7 @@ namespace ContactsMVC
         [STAThread]
         static void Main()
         {
+            Settings.MaxCellphonesCount = 5;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ContactsForm());

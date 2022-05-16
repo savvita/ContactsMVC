@@ -11,6 +11,7 @@ namespace ContactsMVC.Model
         public string City { get; set; }
         public string Street { get; set; }
         public string House { get; set; }
+        public string Appartment { get; set; }
         public string ImageFile { get; set; }
         public List<string> Cellphones { get; set; }
 

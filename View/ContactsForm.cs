@@ -53,5 +53,13 @@ namespace ContactsMVC.View
                 }
             }
         }
+
+        private void ContactsListBox_DoubleClicked(object sender, EventArgs e)
+        {
+            if(this.contactsListBox.SelectedValue != null)
+            {
+                new ContactViewForm(this.contacts[this.contactsListBox.SelectedIndex]).ShowDialog();
+            }
+        }
     }
 }

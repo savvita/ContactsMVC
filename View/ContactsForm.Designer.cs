@@ -35,9 +35,9 @@ namespace ContactsMVC.View
         {
             this.contactsListBox = new System.Windows.Forms.ListBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@ namespace ContactsMVC.View
             this.contactsListBox.Size = new System.Drawing.Size(267, 225);
             this.contactsListBox.TabIndex = 1;
             this.contactsListBox.SelectedIndexChanged += new System.EventHandler(this.ContactsListBox_SelectedIndexChanged);
+            this.contactsListBox.DoubleClick += new System.EventHandler(this.ContactsListBox_DoubleClicked);
             // 
             // addButton
             // 
@@ -59,15 +60,6 @@ namespace ContactsMVC.View
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(81, 12);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(142, 130);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 3;
-            this.pictureBox.TabStop = false;
             // 
             // nameLabel
             // 
@@ -86,6 +78,15 @@ namespace ContactsMVC.View
             this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(81, 12);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(142, 130);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 3;
+            this.pictureBox.TabStop = false;
             // 
             // ContactsForm
             // 
