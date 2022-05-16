@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using ContactsMVC.Model;
 
 namespace ContactsMVC.Controller
@@ -13,6 +14,13 @@ namespace ContactsMVC.Controller
 
         public void AddContact(ContactModel contact)
         {
+            int currentID = 1;
+
+            if(contacts.Count > 0)
+                currentID = contacts.OrderByDescending(x => x.ID).First().ID + 1;
+
+            contact.ID = currentID;
+
             contacts.Add(contact);
         }
 
