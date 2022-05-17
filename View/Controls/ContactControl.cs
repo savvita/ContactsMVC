@@ -18,28 +18,33 @@ namespace ContactsMVC.View.Controls
         {
             if (contact != null)
             {
-                if (isReadOnly)
-                {
-                    AddCellphonesTextBox(contact.Cellphones.Count);
-                    DisableChanges();
-                }
-                else
-                {
-                    AddCellphonesTextBox(Settings.MaxCellphonesCount);
-                }
-
-                SetContactValues(contact, isReadOnly);
+                SetContact(contact, isReadOnly);
             }
             else
             {
                 AddCellphonesTextBox(Settings.MaxCellphonesCount);
                 this.pictureBox.Image = Properties.Resources.NoPhoto;
             }
-
-            this.firstNameTextBox.Select();
         }
 
-        public void SetContactValues(ContactModel contact, bool isReadOnly)
+        protected void SetContact(ContactModel contact, bool isReadOnly)
+        {
+            this.cellphonesTextBox.Clear();
+
+            if (isReadOnly)
+            {
+                AddCellphonesTextBox(contact.Cellphones.Count);
+                DisableChanges();
+            }
+            else
+            {
+                AddCellphonesTextBox(Settings.MaxCellphonesCount);
+            }
+
+            SetContactValues(contact, isReadOnly);
+        }
+
+        protected void SetContactValues(ContactModel contact, bool isReadOnly)
         {
             this.firstNameTextBox.Text = contact.FirstName;
             this.lastNameTetxBox.Text = contact.LastName;

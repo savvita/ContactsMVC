@@ -61,7 +61,12 @@ namespace ContactsMVC.View
         {
             if(this.contactsListBox.SelectedValue != null)
             {
-                new ContactViewForm(this.contacts[this.contactsListBox.SelectedIndex]).ShowDialog();
+                ViewContactForm form = new ViewContactForm(this.contacts[this.contactsListBox.SelectedIndex]);
+                form.ShowDialog();
+
+                contactController.EditContact(this.contacts[this.contactsListBox.SelectedIndex], form.Contact);
+
+                this.bindingSource.ResetBindings(false);
             }
         }
 

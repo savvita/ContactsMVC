@@ -63,11 +63,17 @@
     <Compile Include="View\ContactsForm.Designer.cs">
       <DependentUpon>ContactsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ContactViewForm.cs">
+    <Compile Include="View\EditContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ContactViewForm.Designer.cs">
-      <DependentUpon>ContactViewForm.cs</DependentUpon>
+    <Compile Include="View\EditContactForm.Designer.cs">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewContactForm.Designer.cs">
+      <DependentUpon>ViewContactForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\ContactControl.cs">
       <SubType>UserControl</SubType>
@@ -103,8 +109,11 @@
     <EmbeddedResource Include="View\ContactsForm.resx">
       <DependentUpon>ContactsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ContactViewForm.resx">
-      <DependentUpon>ContactViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\EditContactForm.resx">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewContactForm.resx">
+      <DependentUpon>ViewContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\ContactControl.resx">
       <DependentUpon>ContactControl.cs</DependentUpon>

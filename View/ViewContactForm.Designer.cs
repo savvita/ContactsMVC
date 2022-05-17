@@ -1,6 +1,6 @@
 ﻿namespace ContactsMVC.View
 {
-    partial class ContactViewForm
+    partial class ViewContactForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.editButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(347, 299);
+            this.editButton.Location = new System.Drawing.Point(12, 299);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 23);
             this.editButton.TabIndex = 0;
@@ -41,13 +42,25 @@
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // ContactViewForm
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(347, 299);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // ViewContactForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.closeButton;
             this.ClientSize = new System.Drawing.Size(434, 334);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.editButton);
-            this.Name = "ContactViewForm";
+            this.Name = "ViewContactForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContactViewForm";
             this.ResumeLayout(false);
@@ -58,5 +71,6 @@
 
         private Controls.ContactViewModeControl contactViewModeControl;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

@@ -7,5 +7,9 @@ namespace ContactsMVC.View.Controls
         public ContactEditModeControl(ContactModel contact) : base(contact, false)
         {
         }
+        public void SetContact(ContactModel contact)
+        {
+            base.SetContact(contact, false);
+        }
     }
 }
