@@ -1,6 +1,6 @@
 ﻿namespace ContactsMVC.View.Controls
 {
-    partial class ContactEditModeControl
+    partial class ContactViewModeControl
     {
         /// <summary> 
         /// Required designer variable.

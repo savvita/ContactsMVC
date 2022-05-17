@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.contactEditModeControl = new ContactsMVC.View.Controls.ContactEditModeControl();
+            this.editButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // contactEditModeControl
+            // editButton
             // 
-            this.contactEditModeControl.Location = new System.Drawing.Point(13, 13);
-            this.contactEditModeControl.Name = "contactEditModeControl";
-            this.contactEditModeControl.Size = new System.Drawing.Size(418, 309);
-            this.contactEditModeControl.TabIndex = 0;
+            this.editButton.Location = new System.Drawing.Point(347, 299);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(75, 23);
+            this.editButton.TabIndex = 0;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // ContactViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 334);
-            this.Controls.Add(this.contactEditModeControl);
+            this.Controls.Add(this.editButton);
             this.Name = "ContactViewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContactViewForm";
@@ -53,6 +56,7 @@
 
         #endregion
 
-        private Controls.ContactEditModeControl contactEditModeControl;
+        private Controls.ContactViewModeControl contactViewModeControl;
+        private System.Windows.Forms.Button editButton;
     }
 }

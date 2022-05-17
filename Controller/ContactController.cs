@@ -11,11 +11,11 @@ namespace ContactsMVC.Controller
         public ContactController()
         {
             contacts = new List<ContactModel>();
+            contacts.Add(new ContactModel { FirstName = "John", LastName = "Smith" });
+            contacts.Add(new ContactModel { FirstName = "Stepan", LastName = "Bandera" });
         }
         public List<ContactModel> GetContacts()
         {
-            contacts.Add(new ContactModel { FirstName = "John", LastName = "Smith" });
-            contacts.Add(new ContactModel { FirstName = "Stepan", LastName = "Bandera" });
             return contacts;
         }
 

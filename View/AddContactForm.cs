@@ -17,11 +17,20 @@ namespace ContactsMVC.View
         public AddContactForm()
         {
             InitializeComponent();
+            this.contactEditModeControl = new Controls.ContactEditModeControl(null);
+            this.Controls.Add(this.contactEditModeControl);
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Contact = new ContactModel { FirstName = this.firstNameTextBox.Text, LastName = this.lastNameTextBox.Text};
+            this.DialogResult = DialogResult.OK;
+            Contact = this.contactEditModeControl.GetContact();
+            this.Close();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }

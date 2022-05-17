@@ -50,6 +50,7 @@ namespace ContactsMVC.View
             this.contactsListBox.TabIndex = 1;
             this.contactsListBox.SelectedIndexChanged += new System.EventHandler(this.ContactsListBox_SelectedIndexChanged);
             this.contactsListBox.DoubleClick += new System.EventHandler(this.ContactsListBox_DoubleClicked);
+            this.contactsListBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ContactsListBox_KeyUp);
             // 
             // addButton
             // 

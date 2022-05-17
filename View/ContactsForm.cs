@@ -20,21 +20,24 @@ namespace ContactsMVC.View
             InitializeComponent();
 
             this.contactController = new ContactController();
-
-            this.contacts = contactController.GetContacts();
+            this.contacts = this.contactController.GetContacts();
 
             this.bindingSource = new BindingSource();
-            this.bindingSource.DataSource = contacts;
+            this.bindingSource.DataSource = this.contacts;
 
-            this.contactsListBox.DataSource = bindingSource;
+            this.contactsListBox.DataSource = this.bindingSource;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             AddContactForm form = new AddContactForm();
             form.ShowDialog();
-            contactController.AddContact(form.Contact);
-            bindingSource.ResetBindings(false);
+
+            if (form.DialogResult == DialogResult.OK)
+            {
+                contactController.AddContact(form.Contact);
+                bindingSource.ResetBindings(false);
+            }
         }
 
         private void ContactsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,6 +62,14 @@ namespace ContactsMVC.View
             if(this.contactsListBox.SelectedValue != null)
             {
                 new ContactViewForm(this.contacts[this.contactsListBox.SelectedIndex]).ShowDialog();
+            }
+        }
+
+        private void ContactsListBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                ContactsListBox_DoubleClicked(this, EventArgs.Empty);
             }
         }
     }

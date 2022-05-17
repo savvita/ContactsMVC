@@ -69,11 +69,23 @@
     <Compile Include="View\ContactViewForm.Designer.cs">
       <DependentUpon>ContactViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\ContactControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ContactControl.Designer.cs">
+      <DependentUpon>ContactControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\ContactEditModeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\Controls\ContactEditModeControl.Designer.cs">
       <DependentUpon>ContactEditModeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ContactViewModeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ContactViewModeControl.Designer.cs">
+      <DependentUpon>ContactViewModeControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ContactViewForm.resx">
       <DependentUpon>ContactViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\ContactControl.resx">
+      <DependentUpon>ContactControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\ContactEditModeControl.resx">
       <DependentUpon>ContactEditModeControl.cs</DependentUpon>
