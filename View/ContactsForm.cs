@@ -48,14 +48,7 @@ namespace ContactsMVC.View
             {
                 this.nameLabel.Text = this.contacts[this.contactsListBox.SelectedIndex].ToString();
 
-                if (File.Exists(this.contacts[this.contactsListBox.SelectedIndex].ImageFile))
-                {
-                    this.pictureBox.Image = Image.FromFile(this.contacts[this.contactsListBox.SelectedIndex].ImageFile);
-                }
-                else
-                {
-                    this.pictureBox.Image = Properties.Resources.NoPhoto;
-                }
+                SetImage(this.contacts[this.contactsListBox.SelectedIndex]);
             }
         }
 
@@ -69,6 +62,7 @@ namespace ContactsMVC.View
                 contactController.EditContact(this.contacts[this.contactsListBox.SelectedIndex], form.Contact);
 
                 this.bindingSource.ResetBindings(false);
+                SetImage(this.contacts[this.contactsListBox.SelectedIndex]);
             }
         }
 
@@ -96,6 +90,18 @@ namespace ContactsMVC.View
         private void ContactsFrom_Closing(object sender, FormClosingEventArgs e)
         {
             this.contactController.SaveContacts();
+        }
+
+        private void SetImage(ContactModel contact)
+        {
+            if (File.Exists(contact.ImageFile))
+            {
+                this.pictureBox.Image = Image.FromFile(contact.ImageFile);
+            }
+            else
+            {
+                this.pictureBox.Image = Properties.Resources.NoPhoto;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ContactsMVC.Model;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -120,6 +121,34 @@ namespace ContactsMVC.View.Controls
             }
 
             return contact;
+        }
+
+        private void AddImageButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = Path.Combine(Settings.FilePath, "images");
+
+                if (!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
+
+                try
+                {
+                    string contactImageFile = Path.Combine(path, $"{DateTime.Now.ToString().Replace(':', '_')}.jpg");
+
+                    File.Copy(dialog.FileName, contactImageFile);
+                    this.imageFile = contactImageFile;
+
+                    this.pictureBox.Image = Image.FromFile(contactImageFile);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
     }
 }

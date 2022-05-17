@@ -35,7 +35,16 @@ namespace ContactsMVC.Controller
 
         public List<ContactModel> LoadFromFile()
         {
-             return contactsFileName.LoadFromFile().ConvertToContacts();
+            try
+            {
+                return contactsFileName.LoadFromFile().ConvertToContacts();
+            }
+            catch
+            {
+
+            }
+
+            return new List<ContactModel>();
         }
     }
 }

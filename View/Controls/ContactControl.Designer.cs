@@ -200,6 +200,7 @@ namespace ContactsMVC.View.Controls
             this.addImageButton.TabIndex = 6;
             this.addImageButton.Text = "Add image";
             this.addImageButton.UseVisualStyleBackColor = true;
+            this.addImageButton.Click += new System.EventHandler(this.AddImageButton_Click);
             // 
             // cellphonesGroupBox
             // 
@@ -210,7 +211,7 @@ namespace ContactsMVC.View.Controls
             this.cellphonesGroupBox.TabStop = false;
             this.cellphonesGroupBox.Text = "Cellphones";
             // 
-            // ContactEditModeControl
+            // ContactControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +223,7 @@ namespace ContactsMVC.View.Controls
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.firstNameLabel);
-            this.Name = "ContactEditModeControl";
+            this.Name = "ContactControl";
             this.Size = new System.Drawing.Size(416, 309);
             this.addressGroupBox.ResumeLayout(false);
             this.addressGroupBox.PerformLayout();

@@ -46,6 +46,7 @@ namespace ContactsMVC.Controller
             oldContact.Street = newContact.Street;
             oldContact.House = newContact.House;
             oldContact.Appartment = newContact.Appartment;
+            oldContact.ImageFile = newContact.ImageFile;
 
             oldContact.Cellphones.Clear();
             foreach (string cellphone in newContact.Cellphones)
