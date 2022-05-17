@@ -77,5 +77,18 @@ namespace ContactsMVC.View
                 ContactsListBox_DoubleClicked(this, EventArgs.Empty);
             }
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (this.contactsListBox.SelectedValue != null)
+            {
+                if (MessageBox.Show($"Delete contact { this.contacts[this.contactsListBox.SelectedIndex].ToString() }?", 
+                    "Delete contact", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    contactController.RemoveContact(this.contacts[this.contactsListBox.SelectedIndex]);
+                    this.bindingSource.ResetBindings(false);
+                }
+            }
+        }
     }
 }
