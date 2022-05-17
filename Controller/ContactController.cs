@@ -7,12 +7,13 @@ namespace ContactsMVC.Controller
     public class ContactController
     {
         private List<ContactModel> contacts;
+        FileController fileController;
 
         public ContactController()
         {
             contacts = new List<ContactModel>();
-            contacts.Add(new ContactModel { FirstName = "John", LastName = "Smith" });
-            contacts.Add(new ContactModel { FirstName = "Stepan", LastName = "Bandera" });
+            fileController = new FileController();
+            contacts = fileController.LoadFromFile();
         }
         public List<ContactModel> GetContacts()
         {
@@ -52,6 +53,11 @@ namespace ContactsMVC.Controller
                 oldContact.Cellphones.Add(cellphone);
             }
 
+        }
+
+        public void SaveContacts()
+        {
+            fileController.SaveToFile(contacts);
         }
     }
 }

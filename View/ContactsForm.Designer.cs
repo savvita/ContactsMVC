@@ -68,7 +68,6 @@ namespace ContactsMVC.View
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(267, 23);
             this.nameLabel.TabIndex = 4;
-            this.nameLabel.Text = "name";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // deleteButton
@@ -103,6 +102,7 @@ namespace ContactsMVC.View
             this.Name = "ContactsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contacts";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactsFrom_Closing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 

@@ -16,6 +16,7 @@ namespace ContactsMVC
         static void Main()
         {
             Settings.MaxCellphonesCount = 5;
+            Settings.FilePath = @"d:\contactsMVC";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ContactsForm());

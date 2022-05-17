@@ -37,6 +37,8 @@ namespace ContactsMVC.View
             {
                 contactController.AddContact(form.Contact);
                 bindingSource.ResetBindings(false);
+
+                this.contactsListBox.SelectedIndex = this.contactsListBox.Items.Count - 1;
             }
         }
 
@@ -89,6 +91,11 @@ namespace ContactsMVC.View
                     this.bindingSource.ResetBindings(false);
                 }
             }
+        }
+
+        private void ContactsFrom_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.contactController.SaveContacts();
         }
     }
 }
