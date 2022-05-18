@@ -37,21 +37,26 @@ namespace ContactsMVC.Controller
             contacts.Remove(contacts.Find(x => x.ID == contact.ID));
         }
 
-        public void EditContact (ContactModel oldContact, ContactModel newContact)
+        public void EditContact(int id, ContactModel newContact)
         {
-            oldContact.FirstName = newContact.FirstName;
-            oldContact.LastName = newContact.LastName;
-            oldContact.Country = newContact.Country;
-            oldContact.City = newContact.City;
-            oldContact.Street = newContact.Street;
-            oldContact.House = newContact.House;
-            oldContact.Appartment = newContact.Appartment;
-            oldContact.ImageFile = newContact.ImageFile;
+            ContactModel contact = this.contacts.Find(x => x.ID == id);
 
-            oldContact.Cellphones.Clear();
-            foreach (string cellphone in newContact.Cellphones)
+            if (contact != null)
             {
-                oldContact.Cellphones.Add(cellphone);
+                contact.FirstName = newContact.FirstName;
+                contact.LastName = newContact.LastName;
+                contact.Country = newContact.Country;
+                contact.City = newContact.City;
+                contact.Street = newContact.Street;
+                contact.House = newContact.House;
+                contact.Appartment = newContact.Appartment;
+                contact.ImageFile = newContact.ImageFile;
+
+                contact.Cellphones.Clear();
+                foreach (string cellphone in newContact.Cellphones)
+                {
+                    contact.Cellphones.Add(cellphone);
+                }
             }
 
         }

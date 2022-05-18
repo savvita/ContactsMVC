@@ -19,7 +19,7 @@ namespace ContactsMVC
             Settings.FilePath = @"d:\contactsMVC";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ContactsForm());
+            Application.Run(new ContactBookForm());
         }
     }
 }

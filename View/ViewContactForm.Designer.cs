@@ -34,30 +34,34 @@
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(12, 299);
+            this.editButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.editButton.Location = new System.Drawing.Point(12, 314);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 23);
             this.editButton.TabIndex = 0;
             this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(347, 299);
+            this.closeButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.closeButton.Location = new System.Drawing.Point(347, 314);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // ViewContactForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CancelButton = this.closeButton;
-            this.ClientSize = new System.Drawing.Size(434, 334);
+            this.ClientSize = new System.Drawing.Size(434, 344);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.editButton);
             this.Name = "ViewContactForm";

@@ -13,6 +13,7 @@ namespace ContactsMVC.View
 
         public EditContactForm(ContactModel contact) : this()
         {
+            this.Contact = contact;
             this.contactEditModeControl = new Controls.ContactEditModeControl(contact);
             this.Controls.Add(this.contactEditModeControl);
         }

@@ -63,6 +63,7 @@ namespace ContactsMVC.View.Controls
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.firstNameTextBox.Location = new System.Drawing.Point(78, 9);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(136, 20);
@@ -79,6 +80,7 @@ namespace ContactsMVC.View.Controls
             // 
             // lastNameTetxBox
             // 
+            this.lastNameTetxBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.lastNameTetxBox.Location = new System.Drawing.Point(78, 45);
             this.lastNameTetxBox.Name = "lastNameTetxBox";
             this.lastNameTetxBox.Size = new System.Drawing.Size(136, 20);
@@ -86,6 +88,7 @@ namespace ContactsMVC.View.Controls
             // 
             // addressGroupBox
             // 
+            this.addressGroupBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.addressGroupBox.Controls.Add(this.appartmentTextBox);
             this.addressGroupBox.Controls.Add(this.appartmentLabel);
             this.addressGroupBox.Controls.Add(this.houseTextBox);
@@ -105,6 +108,7 @@ namespace ContactsMVC.View.Controls
             // 
             // appartmentTextBox
             // 
+            this.appartmentTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.appartmentTextBox.Location = new System.Drawing.Point(74, 133);
             this.appartmentTextBox.Name = "appartmentTextBox";
             this.appartmentTextBox.Size = new System.Drawing.Size(117, 20);
@@ -121,6 +125,7 @@ namespace ContactsMVC.View.Controls
             // 
             // houseTextBox
             // 
+            this.houseTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.houseTextBox.Location = new System.Drawing.Point(74, 105);
             this.houseTextBox.Name = "houseTextBox";
             this.houseTextBox.Size = new System.Drawing.Size(117, 20);
@@ -137,6 +142,7 @@ namespace ContactsMVC.View.Controls
             // 
             // streetTextBox
             // 
+            this.streetTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.streetTextBox.Location = new System.Drawing.Point(74, 77);
             this.streetTextBox.Name = "streetTextBox";
             this.streetTextBox.Size = new System.Drawing.Size(117, 20);
@@ -153,6 +159,7 @@ namespace ContactsMVC.View.Controls
             // 
             // cityTextBox
             // 
+            this.cityTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.cityTextBox.Location = new System.Drawing.Point(74, 49);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(117, 20);
@@ -169,6 +176,7 @@ namespace ContactsMVC.View.Controls
             // 
             // countryTextBox
             // 
+            this.countryTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.countryTextBox.Location = new System.Drawing.Point(74, 21);
             this.countryTextBox.Name = "countryTextBox";
             this.countryTextBox.Size = new System.Drawing.Size(117, 20);
@@ -185,6 +193,7 @@ namespace ContactsMVC.View.Controls
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pictureBox.Location = new System.Drawing.Point(264, 9);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(119, 102);
@@ -194,16 +203,19 @@ namespace ContactsMVC.View.Controls
             // 
             // addImageButton
             // 
+            this.addImageButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.addImageButton.Location = new System.Drawing.Point(286, 117);
             this.addImageButton.Name = "addImageButton";
             this.addImageButton.Size = new System.Drawing.Size(75, 23);
             this.addImageButton.TabIndex = 6;
             this.addImageButton.Text = "Add image";
-            this.addImageButton.UseVisualStyleBackColor = true;
+            this.addImageButton.UseVisualStyleBackColor = false;
             this.addImageButton.Click += new System.EventHandler(this.AddImageButton_Click);
             // 
             // cellphonesGroupBox
             // 
+            this.cellphonesGroupBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cellphonesGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cellphonesGroupBox.Location = new System.Drawing.Point(242, 150);
             this.cellphonesGroupBox.Name = "cellphonesGroupBox";
             this.cellphonesGroupBox.Size = new System.Drawing.Size(163, 151);
@@ -215,6 +227,7 @@ namespace ContactsMVC.View.Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Controls.Add(this.cellphonesGroupBox);
             this.Controls.Add(this.addImageButton);
             this.Controls.Add(this.pictureBox);

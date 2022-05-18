@@ -9,6 +9,7 @@ namespace ContactsMVC.View.Controls
 {
     public partial class ContactControl : UserControl
     {
+        private ContactModel _contact;
         public ContactControl()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace ContactsMVC.View.Controls
         {
             if (contact != null)
             {
+                this._contact = contact;
                 SetContact(contact, isReadOnly);
             }
             else
@@ -75,8 +77,9 @@ namespace ContactsMVC.View.Controls
             for (int i = 0; i < count; i++)
             {
                 TextBox cellphoneTextBox = new TextBox();
-                cellphoneTextBox.Size = new Size(120, 20);
+                cellphoneTextBox.Size = new Size(150, 20);
                 cellphoneTextBox.Location = new Point(6, 19 + i * 26);
+                cellphoneTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
                 this.cellphonesTextBox.Add(cellphoneTextBox);
             }
 
@@ -113,6 +116,9 @@ namespace ContactsMVC.View.Controls
                 Appartment = this.appartmentTextBox.Text,
                 ImageFile = this.imageFile,               
             };
+
+            if (this._contact != null)
+                contact.ID = this._contact.ID;
 
             foreach(TextBox cellphone in cellphonesTextBox)
             {

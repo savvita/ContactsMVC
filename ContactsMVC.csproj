@@ -59,11 +59,23 @@
     <Compile Include="View\AddContactForm.Designer.cs">
       <DependentUpon>AddContactForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ContactsForm.cs">
+    <Compile Include="View\ContactBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ContactsForm.Designer.cs">
-      <DependentUpon>ContactsForm.cs</DependentUpon>
+    <Compile Include="View\ContactBookForm.Designer.cs">
+      <DependentUpon>ContactBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ContactPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ContactPreviewControl.Designer.cs">
+      <DependentUpon>ContactPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ContactPreviewListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ContactPreviewListControl.Designer.cs">
+      <DependentUpon>ContactPreviewListControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\EditContactForm.cs">
       <SubType>Form</SubType>
@@ -108,8 +120,14 @@
     <EmbeddedResource Include="View\AddContactForm.resx">
       <DependentUpon>AddContactForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ContactsForm.resx">
-      <DependentUpon>ContactsForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\ContactBookForm.resx">
+      <DependentUpon>ContactBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\ContactPreviewControl.resx">
+      <DependentUpon>ContactPreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\ContactPreviewListControl.resx">
+      <DependentUpon>ContactPreviewListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditContactForm.resx">
       <DependentUpon>EditContactForm.cs</DependentUpon>
@@ -139,6 +157,11 @@
   <ItemGroup>
     <None Include="Resources\NoPhoto.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
