@@ -34,6 +34,8 @@ namespace ContactsMVC.View.Controls
         {
             this.cellphonesTextBox.Clear();
 
+            this.cellphonesGroupBox.Controls.Clear();
+
             if (isReadOnly)
             {
                 AddCellphonesTextBox(contact.Cellphones.Count);
